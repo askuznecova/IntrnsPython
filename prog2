@@ -1,0 +1,17 @@
+from math import gcd
+
+def simplify_fraction(numerator, denominator):
+    # Находим НОД числителя и знаменателя
+    greatest_common_divisor = gcd(numerator, denominator)
+    
+    # Делим числитель и знаменатель на НОД для сокращения дроби
+    simplified_numerator = numerator // greatest_common_divisor
+    simplified_denominator = denominator // greatest_common_divisor
+    
+    return simplified_numerator, simplified_denominator
+
+# Пример использования функции
+num = 8  # Пример числителя
+den = 20  # Пример знаменателя
+simplified_num, simplified_den = simplify_fraction(num, den)
+print(f"Сокращенная дробь: {simplified_num}/{simplified_den}")
